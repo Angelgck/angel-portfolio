@@ -488,7 +488,7 @@ export default function Portfolio() {
             </Button>
             <Button variant="ghost" size="icon" asChild>
               <Link 
-                href="https://x.com/tu-usuario" // <-- PEGA AQUÍ TU LINK DE x
+                href="https://x.com/Xck_Angels" // <-- PEGA AQUÍ TU LINK DE x
                 target="_blank" 
                 rel="noopener noreferrer" 
                 aria-label="X">
