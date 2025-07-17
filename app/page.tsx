@@ -224,8 +224,7 @@ export default function Portfolio() {
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-6">Information Technologies Student & Web Developer</p>
             <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
-              Specializing in Virtual Environments and Digital Business with expertise in web development, digital
-              marketing, and interactive design solutions.
+              Student of virtual environments and digital business with educational experience in web development, digital marketing, and interactive design solutions.
             </p>
           </div>
         </div>
@@ -243,12 +242,10 @@ export default function Portfolio() {
                 passionate about creating innovative digital solutions that bridge technology and business needs.
               </p>
               <p className="text-gray-300 mb-4">
-                My focus on Virtual Environments and Digital Business has equipped me with a unique perspective on how
-                technology can transform user experiences and drive business growth.
+                I'm currently working on various projects that combine design, functionality, and performance, always looking for new ways to optimize web development. I also have a keen interest in immersive technology, such as virtual and augmented reality, as well as cybersecurity and automation.
               </p>
               <p className="text-gray-300 mb-6">
-                With a strong background in marketing and technological design, I specialize in creating visually
-                appealing, functional websites and applications that deliver results.
+                I'm always open to new challenges and opportunities to continue learning and growing in the world of technology.
               </p>
               <div className="flex flex-wrap gap-2">
                 <Badge variant="secondary">Web Development</Badge>
@@ -268,8 +265,8 @@ export default function Portfolio() {
                 </CardHeader>
                 <CardContent>
                   <p className="font-semibold">Information Technologies</p>
-                  <p className="text-gray-300">Virtual Environments & Digital Business</p>
-                  <p className="text-sm text-gray-500">Universidad Tecnológica de la Riviera Maya</p>
+                  <p className="text-gray-600">Virtual Environments & Digital Business</p>
+                  <p className="text-sm text-gray-600">Universidad Tecnológica de la Riviera Maya</p>
                 </CardContent>
               </Card>
               <Card>
@@ -280,7 +277,7 @@ export default function Portfolio() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ul className="text-gray-300 space-y-1">
+                  <ul className="text-gray-600 space-y-1">
                     <li>• Web Application Development</li>
                     <li>• Marketing Website Design</li>
                     <li>• Registration Systems</li>
@@ -297,7 +294,7 @@ export default function Portfolio() {
       <section id="skills" className="py-16 px-4 bg-gradient-to-br from-gray-900 to-gray-800">
         <div className="container mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">Technical Skills</h2>
-          <p className="text-center text-gray-400 mb-12">Hover over each skill to see it illuminate</p>
+          <p className="text-center text-gray-400 mb-12">Pase el cursor sobre cada habilidad para verla iluminada.</p>
 
           {/* Programming Languages */}
           <div className="mb-12">
