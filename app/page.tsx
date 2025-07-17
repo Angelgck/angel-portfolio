@@ -1,5 +1,6 @@
 "use client"
 
+import { Facebook, Instagram} from "lucide-react";
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -15,6 +16,7 @@ import {
   Database,
   Globe,
   Menu,
+  Briefcase,
   X,
 } from "lucide-react"
 import Image from "next/image"
@@ -83,63 +85,58 @@ export default function Portfolio() {
 
   const projects = [
     {
-      title: "Student Registration System",
+      title: "Web Application Development",
       description:
-        "A comprehensive web application for managing student and administrator registrations with role-based access control.",
+        "Designing, developing, and deploying dynamic and responsive web applications from concept to completion.",
       technologies: ["PHP", "MySQL", "JavaScript", "CSS"],
-      image: "/placeholder.svg?height=200&width=300",
-      github: "#",
-      demo: "#",
+      image: "/images/Captura de pantalla 2025-07-16 211741.png",
     },
     {
-      title: "Marketing Agency Website",
+      title: "Animations in 2D and 3D",
       description:
-        "Modern, responsive website for a digital marketing agency with animated elements and interactive features.",
-      technologies: ["Vue.js", "CSS3", "JavaScript", "Animation"],
-      image: "/placeholder.svg?height=200&width=300",
-      github: "#",
-      demo: "#",
+        "Creating animations, from motion graphics to character design. Bringing static concepts to life through compelling visual media and interactive platforms.",
+      technologies: ["Blender", "Adobe Animate"],
+      image: "/images/calacawalk.jpg",
+      
     },
     {
-      title: "Interactive Animation Portfolio",
-      description: "Creative showcase of various animations and interactive elements for web applications.",
-      technologies: ["JavaScript", "CSS3", "HTML5", "Animation"],
-      image: "/placeholder.svg?height=200&width=300",
-      github: "#",
-      demo: "#",
+      title: "Digital Modeling and Immersive Experiences",
+      description: "Building detailed 3D models and crafting immersive experiences using Virtual Reality (VR) and Augmented Reality (AR). Focused on creating interactive and realistic digital environments for training, visualization, or entertainment.",
+      technologies: ["Polycam", "Unity Technologies", "Blender"],
+      image: "/images/Imagen de WhatsApp 2025-07-16 a las 21.32.51_cb028aa6.jpg",
+      
     },
     {
-      title: "E-commerce Dashboard",
+      title: "Audiovisuals and content creation",
       description:
-        "Administrative dashboard for managing products, orders, and customer data with real-time analytics.",
-      technologies: ["Vue.js", "PHP", "MySQL", "Chart.js"],
-      image: "/placeholder.svg?height=200&width=300",
-      github: "#",
-      demo: "#",
+        "Producing high-quality audiovisual content, including video shooting, editing, sound design, and graphic creation.",
+      technologies: ["Spotify", "Redes Sociales", "Podcasts"],
+      image: "/images/grupo.jpg",
+      
     },
   ]
 
   const experiences = [
     {
-      title: "Freelance Web Developer",
+      title: "3D Art Digital", 
       company: "Self-Employed",
-      period: "2023 - Present",
+      period: "2024",
       description:
-        "Developing custom websites and web applications for local businesses, focusing on responsive design and user experience.",
+        "A company with its own employees, focused on designing flyers, posters, t-shirts, caps, etc.",
     },
     {
-      title: "Digital Marketing Assistant",
-      company: "Local Marketing Agency",
-      period: "2022 - 2023",
+      title: "Purification machine manager for CEMEX",
+      company: "Company CEMEX",
+      period: "2023",
       description:
-        "Assisted in creating digital marketing campaigns, designing promotional materials, and managing social media content.",
+        "Responsible for ensuring water quality standards, operational efficiency, and adherence to safety protocols.",
     },
     {
-      title: "IT Support Intern",
-      company: "Universidad Tecnológica de la Riviera Maya",
-      period: "2022",
+      title: "Fotographer",
+      company: "Self-Employed",
+      period: "2023",
       description:
-        "Provided technical support to students and faculty, maintained computer systems, and assisted with software installations.",
+        "Capturing high-quality, compelling images across various styles, including portrait, event, and commercial photography.",
     },
   ]
 
@@ -372,49 +369,48 @@ export default function Portfolio() {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Featured Projects</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
-              <Card
+              <Card 
                 key={index}
-                className="bg-gray-900 border-gray-700 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300 overflow-hidden"
-              >
-                <div className="relative">
-                  <Image
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.title}
-                    width={300}
-                    height={200}
-                    className="w-full h-48 object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                </div>
-                <CardHeader>
-                  <CardTitle>{project.title}</CardTitle>
-                  <CardDescription>{project.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.technologies.map((tech, techIndex) => (
-                      <Badge key={techIndex} variant="outline">
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-                  <div className="flex gap-2">
-                    <Button variant="outline" size="sm" asChild>
-                      <Link href={project.github}>
-                        <Github className="mr-2 h-4 w-4" />
-                        Code
-                      </Link>
-                    </Button>
-                    <Button size="sm" asChild>
-                      <Link href={project.demo}>
-                        <ExternalLink className="mr-2 h-4 w-4" />
-                        Demo
-                      </Link>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                className="bg-gray-800/50 border border-gray-700 rounded-xl overflow-hidden
+                  transition-all duration-300
+                 hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-2">
+    {/* Contenedor de la Imagen con efecto de zoom al pasar el cursor */}
+    <div className="relative overflow-hidden">
+      <Image
+        src={project.image || "/placeholder.svg"}
+        alt={project.title}
+        width={300}
+        height={200}
+        className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+      />
+      {/* Overlay de gradiente para que el texto (si lo hubiera) se lea mejor */}
+      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent" />
+    </div>
+    
+    <CardHeader>
+      <CardTitle className="text-xl font-bold text-gray-100 tracking-wide">
+        {project.title}
+      </CardTitle>
+      <CardDescription className="text-gray-400 h-20"> {/* Altura fija para alinear tarjetas */}
+        {project.description}
+      </CardDescription>
+    </CardHeader>
+    
+    <CardContent>
+      <div className="flex flex-wrap gap-2">
+        {project.technologies.map((tech, techIndex) => (
+          <Badge 
+            key={techIndex} 
+            variant="outline"
+            className="bg-blue-900/50 text-blue-300 border-blue-700/50"
+          >
+            {tech}
+          </Badge>
+        ))}
+      </div>
+    </CardContent>
+  </Card>
+))}
           </div>
         </div>
       </section>
@@ -433,7 +429,10 @@ export default function Portfolio() {
                   <div className="flex justify-between items-start">
                     <div>
                       <CardTitle>{exp.title}</CardTitle>
-                      <CardDescription className="text-blue-600 font-medium">{exp.company}</CardDescription>
+                      <CardDescription className="text-blue-600 font-medium mt-4 pl-2 flex items-center">
+                      <Briefcase className="mr-2 h-4 w-4" />
+                      {exp.company}
+                     </CardDescription>
                     </div>
                     <Badge variant="outline">{exp.period}</Badge>
                   </div>
@@ -452,7 +451,7 @@ export default function Portfolio() {
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-white">Let's Work Together</h2>
           <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-            I'm always interested in new opportunities and exciting projects. Let's discuss how we can bring your ideas
+            Let's discuss how we can bring your ideas
             to life!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -461,29 +460,43 @@ export default function Portfolio() {
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
             >
               <Mail className="mr-2 h-4 w-4" />
-              angel.caamal@example.com
+              angelcaamal728@gmail.com
             </Button>
             <Button variant="outline" size="lg">
               <Phone className="mr-2 h-4 w-4" />
-              +52 (998) 123-4567
+              +52 (984) 136 1112
             </Button>
           </div>
           <div className="flex justify-center space-x-4">
+             <Button variant="ghost" size="icon" asChild>
+               <Link 
+                 href="https://www.facebook.com/tu-usuario" // <-- PEGA AQUÍ TU LINK DE FACEBOOK
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 aria-label="Facebook">
+                 <Facebook className="h-5 w-5" />
+               </Link>
+             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <Link href="#" aria-label="LinkedIn">
-                <Linkedin className="h-5 w-5" />
+              <Link 
+                href="https://www.instagram.com/tu-usuario" // <-- PEGA AQUÍ TU LINK DE INSTAGRAM
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Instagram">
+                <Instagram className="h-5 w-5" />
               </Link>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <Link href="#" aria-label="GitHub">
-                <Github className="h-5 w-5" />
+              <Link 
+                href="https://x.com/tu-usuario" // <-- PEGA AQUÍ TU LINK DE x
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="X">
+                <X className="h-6 w-6" />
               </Link>
             </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <Link href="#" aria-label="Email">
-                <Mail className="h-5 w-5" />
-              </Link>
-            </Button>
+            
+            
           </div>
         </div>
       </section>
