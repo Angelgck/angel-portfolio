@@ -470,7 +470,7 @@ export default function Portfolio() {
           <div className="flex justify-center space-x-4">
              <Button variant="ghost" size="icon" asChild>
                <Link 
-                 href="https://www.facebook.com/tu-usuario" // <-- PEGA AQUÍ TU LINK DE FACEBOOK
+                 href="https://www.facebook.com/share/172U8RcV5u/?mibextid=wwXIfr" // <-- PEGA AQUÍ TU LINK DE FACEBOOK
                  target="_blank" 
                  rel="noopener noreferrer" 
                  aria-label="Facebook">
@@ -479,7 +479,7 @@ export default function Portfolio() {
              </Button>
             <Button variant="ghost" size="icon" asChild>
               <Link 
-                href="https://www.instagram.com/tu-usuario" // <-- PEGA AQUÍ TU LINK DE INSTAGRAM
+                href="https://www.instagram.com/ckk.angels?igsh=aW8wcmZ6Z2RsajBk&utm_source=qr" // <-- PEGA AQUÍ TU LINK DE INSTAGRAM
                 target="_blank" 
                 rel="noopener noreferrer" 
                 aria-label="Instagram">
